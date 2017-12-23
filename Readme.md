@@ -1,0 +1,4 @@
+# Minaze
+
+## Game Development Project
+

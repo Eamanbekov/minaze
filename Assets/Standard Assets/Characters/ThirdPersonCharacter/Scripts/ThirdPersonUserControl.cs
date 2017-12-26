@@ -6,13 +6,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 {
     [RequireComponent(typeof (ThirdPersonCharacter))]
     public class ThirdPersonUserControl : MonoBehaviour
-    {
+	{
         private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
         private Transform m_Cam;                  // A reference to the main camera in the scenes transform
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
-
+		private const float maxHealth = 10f;
+		private float health = maxHealth;
+		[SerializeField]
+		private float healthPerSecond = 0.5f;
+		[SerializeField]
+		private Light light;
+		private float healHealth = 5f;
         
         private void Start()
         {
@@ -39,8 +45,26 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
+
+			DecreaseHealth ();
         }
 
+		// Decrease health of character per second
+		private void DecreaseHealth() {
+			if (health - healthPerSecond * Time.deltaTime > 0) {
+				health -= healthPerSecond * Time.deltaTime;
+			} else {
+				health = 0;
+			}
+			light.range = health;
+			Debug.Log (health);
+		}
+
+		// Heal character if he picks up the bulb
+		private void Heal() {
+			health = maxHealth;
+			light.range = health;
+		}
 
         // Fixed update is called in sync with physics
         private void FixedUpdate()
@@ -71,5 +95,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Character.Move(m_Move, crouch, m_Jump);
             m_Jump = false;
         }
+
+		void OnTriggerEnter(Collider other) {
+			if (other.tag == "Bulb") {
+				Heal ();
+				Destroy(other.gameObject);
+			} else if(other.tag == "Exit"){
+				Debug.Log ("YOU WON");
+			}
+		}
     }
 }

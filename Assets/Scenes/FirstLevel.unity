@@ -1746,6 +1746,11 @@ Prefab:
       propertyPath: m_Name
       value: Bulb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 23139412620398148, guid: 1da2f911e687c434c9e9e856d7b81d3f,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 617243c6fdcf2d246b04b3da0e06d673, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1da2f911e687c434c9e9e856d7b81d3f, type: 2}
   m_IsPrefabParent: 0
@@ -3290,6 +3295,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 23139412620398148, guid: 1da2f911e687c434c9e9e856d7b81d3f,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 617243c6fdcf2d246b04b3da0e06d673, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1da2f911e687c434c9e9e856d7b81d3f, type: 2}
   m_IsPrefabParent: 0

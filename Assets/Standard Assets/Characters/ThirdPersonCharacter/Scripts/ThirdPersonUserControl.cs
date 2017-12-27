@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -19,6 +20,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		[SerializeField]
 		private Light light;
 		private float healHealth = 5f;
+		[SerializeField]
+		private Image healthBar;
         
         private void Start()
         {
@@ -57,13 +60,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				health = 0;
 			}
 			light.range = health;
-			Debug.Log (health);
+			healthBar.fillAmount = health / 10f;
 		}
 
 		// Heal character if he picks up the bulb
 		private void Heal() {
 			health = maxHealth;
 			light.range = health;
+			healthBar.fillAmount = health / 10f;
 		}
 
         // Fixed update is called in sync with physics

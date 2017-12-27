@@ -97,10 +97,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         }
 
 		void OnTriggerEnter(Collider other) {
-			if (other.tag == "Bulb") {
+			if (other.CompareTag ("Bulb")) {
 				Heal ();
-				Destroy(other.gameObject);
-			} else if(other.tag == "Exit"){
+			} else if(other.CompareTag ("Exit")){
 				Debug.Log ("YOU WON");
 			}
 		}

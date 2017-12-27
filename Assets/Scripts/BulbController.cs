@@ -4,23 +4,17 @@ using UnityEngine;
 
 public class BulbController : MonoBehaviour {
 
-	private Light light;
 	[SerializeField]
-	private const float maxRange = 10f;
-	[SerializeField]
-	private const float minRange = 5f;
-	private float step = 10f;
+	private GameObject pickupEffect;
 
-	// Use this for initialization
-	void Start () {
-		light = GetComponent<Light> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (light.range > maxRange || light.range < minRange) {
-			step *= -1;
+	void OnTriggerEnter(Collider other) {
+		if (other.CompareTag ("Player")) {
+			Explode ();
 		}
-		light.range = light.range - step * Time.deltaTime ;
+	}
+
+	void Explode () {
+		Instantiate (pickupEffect, transform.position, transform.rotation);
+		Destroy (gameObject);
 	}
 }

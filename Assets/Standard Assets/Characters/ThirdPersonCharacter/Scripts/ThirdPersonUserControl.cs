@@ -23,6 +23,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		private float healHealth = 5f;
 		[SerializeField]
 		private Image healthBar;
+		[SerializeField]
+		private GameObject tryAgain;
         
         private void Start()
         {
@@ -59,6 +61,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				health -= healthPerSecond * Time.deltaTime;
 			} else {
 				health = 0;
+				tryAgain.SetActive (true);
+				gameObject.SetActive (false);
 			}
 			light.range = health;
 			healthBar.fillAmount = health / 10f;

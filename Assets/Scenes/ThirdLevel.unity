@@ -88,7 +88,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -3745,9 +3744,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 1
-  m_CookingOptions: 0
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &606197815
@@ -6183,6 +6182,111 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1001859600}
   m_Mesh: {fileID: 4300002, guid: 66a13889798137c498eae4b3acdafe19, type: 3}
+--- !u!1001 &1041576105
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.6899986
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.47642744
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.70090926
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.71325046
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224376044401611360, guid: e424bcf20249146bf8ab5af080dc04f4,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e424bcf20249146bf8ab5af080dc04f4, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1041576106 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1092029448331356, guid: e424bcf20249146bf8ab5af080dc04f4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1041576105}
 --- !u!1 &1045744083
 GameObject:
   m_ObjectHideFlags: 0
@@ -7367,9 +7471,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 1
-  m_CookingOptions: 0
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1288277580
@@ -7759,6 +7863,11 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -0.110415146
       objectReference: {fileID: 0}
+    - target: {fileID: 114120053175728510, guid: 4afc327a0c305481ab4ac935f451509f,
+        type: 2}
+      propertyPath: tryAgain
+      value: 
+      objectReference: {fileID: 1041576106}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4afc327a0c305481ab4ac935f451509f, type: 2}
   m_IsPrefabParent: 0
@@ -9715,9 +9824,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 1
-  m_CookingOptions: 0
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1850644767
@@ -9979,9 +10088,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 1
-  m_CookingOptions: 0
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1966458452

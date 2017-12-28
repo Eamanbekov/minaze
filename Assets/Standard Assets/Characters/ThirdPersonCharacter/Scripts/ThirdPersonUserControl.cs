@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -104,7 +105,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (other.CompareTag ("Bulb")) {
 				Heal ();
 			} else if(other.CompareTag ("Exit")){
-				Debug.Log ("YOU WON");
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 			}
 		}
     }

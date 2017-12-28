@@ -25,6 +25,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		private Image healthBar;
 		[SerializeField]
 		private GameObject tryAgain;
+		[SerializeField]
+		private AudioClip pickupSound;
+		private AudioSource audioSource;
         
         private void Start()
         {
@@ -42,6 +45,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
+			audioSource = GetComponent<AudioSource> ();
         }
 
 
@@ -73,6 +77,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			health = maxHealth;
 			light.range = health;
 			healthBar.fillAmount = health / 10f;
+			audioSource.PlayOneShot (pickupSound);
 		}
 
         // Fixed update is called in sync with physics

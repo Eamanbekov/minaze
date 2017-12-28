@@ -1,5 +1,5 @@
 # Minaze
-
+<img src="/Assets/logo.jpg"></img>
 ## Game Development Project
 
 ## How to play?
